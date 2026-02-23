@@ -3,10 +3,10 @@ const axios = require('axios');
 const ExcelJS = require('exceljs');
 const fs = require('fs');
 const path = require('path');
-
+const cors = require('cors');
 const app = express();
+app.use(cors()); 
 app.use(express.json());
-
 // ====================== HELPER FUNCTIONS ======================
 function columnLetterToIndex(letter) {
     let index = 0;

@@ -6,14 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-   "build": "babel . -d dist --ignore node_modules"
+    "build": "babel . -d dist --ignore node_modules"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "archiver": "^7.0.1",
     "axios": "^1.13.5",
+    "cors": "^2.8.6",
     "exceljs": "^4.4.0",
     "express": "^5.2.1"
   },

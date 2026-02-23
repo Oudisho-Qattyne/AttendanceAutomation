@@ -169,7 +169,7 @@
         </div>
 
         <form id="processForm">
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="server">KoboToolbox Server:</label>
                 <input type="text" id="server" name="server"
                     placeholder="e.g., kf.kobotoolbox.org (do NOT include https://)" dir="ltr">
@@ -186,7 +186,7 @@
                 <label for="uid">Form UID:</label>
                 <input type="text" id="uid" name="uid" placeholder="e.g., aPxNaoXXXXX" dir="ltr">
                 <div class="note">The form's unique identifier</div>
-            </div>
+            </div> -->
 
             <button type="submit" id="processBtn">🚀 Start Processing</button>
         </form>
@@ -202,18 +202,18 @@
         document.getElementById('processForm').addEventListener('submit', async (e) => {
             e.preventDefault();
 
-            const server = document.getElementById('server').value.trim();
-            const token = document.getElementById('token').value.trim();
-            const uid = document.getElementById('uid').value.trim();
+            // const server = document.getElementById('server').value.trim();
+            // const token = document.getElementById('token').value.trim();
+            // const uid = document.getElementById('uid').value.trim();
 
             const statusDiv = document.getElementById('status');
             const processBtn = document.getElementById('processBtn');
 
             // Prepare request body (only include fields that have values)
             const requestBody = {};
-            if (server) requestBody.server = server;
-            if (token) requestBody.token = token;
-            if (uid) requestBody.uid = uid;
+            // if (server) requestBody.server = server;
+            // if (token) requestBody.token = token;
+            // if (uid) requestBody.uid = uid;
 
             statusDiv.className = 'status loading';
             statusDiv.innerHTML = '<span class="spinner"></span> Processing... This may take a few minutes.';
